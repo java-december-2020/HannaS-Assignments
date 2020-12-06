@@ -15,7 +15,7 @@ public void printOddOneTo255(){
         }
     }
 }
-public void printSum(int[] arr){
+public void printSum(){
     for(int i = 0; i <= 255; i++){
         int sum = 0;
         System.out.println("New number: " + i);
