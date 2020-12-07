@@ -67,13 +67,23 @@ public static void shuffleLessThanFive(String[] y) {
         System.out.println(x[x.length-1]);
     }
 
+    public static String generateRandomChars(String candidateChars, int length) {
+        StringBuilder sb = new StringBuilder();
+        Random random = new Random();
+        for (int i = 0; i < length; i++) {
+            sb.append(candidateChars.charAt(random.nextInt(candidateChars.length())));
+        }
     
+        return sb.toString();
+    }
 
-    
-
-
-
-
+    public static void randStringArray(int length){
+        ArrayList<String> ranStrArr = new ArrayList<String>();
+        for(int k = 0; k < length; k++){
+            ranStrArr.add(generateRandomChars("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",5));
+        }
+        System.out.println(ranStrArr);
+    }
 
 
 
@@ -85,8 +95,10 @@ public static void main(String[] args){
 //alphabetPuzzle();
 //randomIntArr(55, 100);
 //sortArray(randomIntArr(55,100));
+//System.out.println(generateRandomChars("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890", 5));
+//randStringArray(10);
+
+
     }
-
-
 }
 
