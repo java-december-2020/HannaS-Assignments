@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+body{
+	margin: auto;
+	width: 970px; 
+}
+
+.template{
+	display: inline-block; 
+	text-align: center; 
+	width: 400px; 
+	margin-left: 50px;
+	margin-top: 200px;
+}
+#date{
+	color: blue; 
+}
+#time{
+	color: green; 
+}
