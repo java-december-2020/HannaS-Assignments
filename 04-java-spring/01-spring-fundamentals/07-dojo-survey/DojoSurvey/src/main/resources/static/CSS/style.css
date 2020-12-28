@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.info{
+	display: inline-block; 
+	border: 1px solid black; 
+	width: 400px;  
+	padding: 30px; 
+	margin: 40px 300px; 
+	
+	
+}
+.wrapper{
+	width: 970px;
+	margin: auto; 
+}
+button{
+	background-color: #76a5af; 
+	margin-left: 300px; 
+	margin-top: 10px; 
+	padding: 3px; 
+	color: white; 
+}
+.name{
+	margin: 10px; 
+}
+select{
+	margin: 10px; 
+}
+textarea{
+	margin: 10px; 
+}
+h3{
+	text-decoration: underline; 
+}
