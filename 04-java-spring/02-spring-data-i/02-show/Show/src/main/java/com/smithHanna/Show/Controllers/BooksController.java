@@ -41,11 +41,11 @@ public class BooksController {
 		return "/books/showBook.jsp"; 
 	}
 	
-	@RequestMapping("books/new")
+	/*@RequestMapping("books/new")
 	public String newBook(Book book, Model model) {
 		model.addAttribute("book", book);
 		return "/books/new.jsp"; 
-	}
+	}*/
 	
 	@PostMapping(value="/books")
 	public String create(@Valid @ModelAttribute("book") Book book, BindingResult result) {
@@ -83,6 +83,21 @@ public class BooksController {
 	    public String destroyBook(@PathVariable("id") int id) {
 	    	this.bService.destroyBook(id);
 	    	return "redirect:/books";
+	    }
+	   @RequestMapping("/books/new")
+	    public String newBook(@ModelAttribute("book") Book book) {
+	        return "/books/newBook.jsp";
+	    }
+	   
+	   @PostMapping("/books/new")
+	    public String createBook(@Valid @ModelAttribute("book") Book book, BindingResult result) {
+	        if (result.hasErrors()) {
+	            return "/books/newBook.jsp";
+	        }else{
+	            // Add the book
+	        	this.bService.addBook(book);
+	            return "redirect:/books";
+	        }
 	    }
 }
 	

@@ -78,5 +78,7 @@ public class BookService {
 		return this.bookRepo.save(updatedBook);
 		
 	}
-	
+	  public void addBook(Book book) {
+	        books.add(book);
+	    }
 }

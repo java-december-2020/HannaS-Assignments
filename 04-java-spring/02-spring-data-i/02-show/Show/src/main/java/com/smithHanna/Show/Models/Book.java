@@ -40,6 +40,7 @@ private Date createdAt;
 @DateTimeFormat(pattern = "MM/dd/yyyy HH:mm:ss")
 private Date updatedAt; 
 
+
 @PrePersist
 protected void onCreate(){
     this.createdAt = new Date();
@@ -48,6 +49,8 @@ protected void onCreate(){
 protected void onUpdate(){
     this.updatedAt = new Date();
 }
+
+
 
 public Book() {
 	
