@@ -24,6 +24,7 @@ public class License {
  @GeneratedValue(strategy = GenerationType.IDENTITY)
  private Long id;
  private Integer number;
+ @NotBlank
  @DateTimeFormat(pattern="yyyy-MM-dd")
  private Date expirationDate;
  @NotBlank
